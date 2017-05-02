@@ -23,24 +23,22 @@
         dataSource: {
             transport: {
                 read: {
-                    url: "/Grid/GetUsers/",
-                    dataType: "json"
+                    url: "api/Grid/GetUsers/"
                 }
             },
             schema: {
                 model: {
                     fields: {
-                        Age: { type: "int" },
-                        Name: {
-                            First: { type: "string" },
-                            Last: { type: "string" }
+                        name: {
+                            first: { type: "string" },
+                            last: { type: "string" }
                         },
-                        Company: { type: "string" },
-                        Email: { type: "string" },
-                        Phone: { type: "string" },
-                        Email: { type: "string" },
-                        Age: { type: "string" },
-                        Registered: { type: "date" }
+                        company: { type: "string" },
+                        email: { type: "string" },
+                        phone: { type: "string" },
+                        email: { type: "string" },
+                        age: { type: "string" },
+                        registered: { type: "date" }
                     }
                 }
             },
@@ -63,44 +61,52 @@
         sortable: true,
         pageable: true,
         columns: [
-             {
-                field: "IsActive",
-                template: '<input type="checkbox" #= IsActive ? "checked=true" : "" # disabled="false" ></input>',
+            {
+                title: "IsActive",
+                field: "isActive",
+                template: '<input type="checkbox" #= isActive ? "checked=true" : "" # disabled="false" ></input>',
                 width: 80,
                 filterable: false,
 
             }, {
-                field: "Balance",
+                title: "Balance",
+                field: "balance",
                 width: 150,
                 filterable: false,
             }, {
-                field: "Age",
+                title: "Age",
+                field: "age",
                 width: 80,
                 filterable: {
                     mode: "row"
                 },
             }, {
                 title: "First Name",
-                field: "Name.First",
+                field: "name.first",
                 width: 150
             }, {
                 title: "Last Name",
-                field: "Name.Last",
+                field: "name.last",
                 width: 150
             }, {
-                field: "Company",
+                title: "Company",
+                field: "company",
                 width: 150
             }, {
-                field: "Email",
+                title: "Email",
+                field: "email",
                 width: 150
             }, {
-                field: "Phone",
+                title: "Phone",
+                field: "phone",
                 width: 150
             }, {
-                field: "Address",
+                title: "Address",
+                field: "address",
                 width: 150
             }, {
-                field: "Registered",
+                title: "Registered",
+                field: "registered",
                 width: 150,
                 type: "date",
                 format: "{0:dd/MM/yyyy}",
