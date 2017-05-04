@@ -13,15 +13,25 @@
     <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2017.1.223/styles/kendo.material.min.css" />
     <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2017.1.223/styles/kendo.material.mobile.min.css" />
 
-    <script src="https://kendo.cdn.telerik.com/2017.1.223/js/jquery.min.js"></script>
+        <script src="https://kendo.cdn.telerik.com/2017.1.223/js/jquery.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2017.1.223/js/angular.min.js"></script>
+
     <script src="https://kendo.cdn.telerik.com/2017.1.223/js/kendo.all.min.js"></script>
-    
+    @Styles.Render("~/Content/css")
 
 </head>
+
+
+
 <body>
     @RenderBody()
 
-
+    @Scripts.Render("~/bundles/Angular")
+    @Scripts.Render("~/bundles/bootstrap")
+    @*@RenderSection("scripts", required: false)*@
    
 </body>
 </html>
+
+
+

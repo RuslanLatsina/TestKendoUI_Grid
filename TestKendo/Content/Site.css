@@ -22,3 +22,14 @@ select,
 textarea {
     max-width: 280px;
 }
+
+
+
+
+.redBtn {
+    background-color: red;
+}
+
+.greenBtn {
+    background-color: green;
+}

@@ -1,11 +1,22 @@
 ﻿
-<div id="Main">
+@*<div id="Main">
 
     <button id="gridButton" style="background-color: green" >Show</button>
 
     <div id="grid"></div>
         <script src="~/Scripts/app/main.js"></script>
     
+</div>*@
+
+<div ng-app="MainApp">
+    <div ng-controller="gridCtrl">
+        <button class="{{color}} btn" ng-click="gridButton()">{{name}}</button>
+        <div ng-show="clicked">
+            <kendo-grid options="mainGridOptions">
+            </kendo-grid>
+        </div>
+        
+    </div>
 </div>
 
 

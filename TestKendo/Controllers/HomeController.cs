@@ -15,11 +15,6 @@ namespace TestKendo.Controllers
         {
             return View();
         }
-        public JsonResult GetUsers()
-        {
-            var data = JsonConvert.DeserializeObject<IEnumerable<UserModel>>(System.IO.File.ReadAllText(Server.MapPath(@"~/Data/users.json")));
-
-            return Json(data, JsonRequestBehavior.AllowGet);
-        }
+       
     }
 }
